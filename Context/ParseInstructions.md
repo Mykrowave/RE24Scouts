@@ -11,13 +11,14 @@ Always reference `Context/RE24Table.md` for RE values. Only process **our team's
 
 ## Step 1 — Identify Our Half-Innings
 
-Our team is **USA Scout 8u Prospects**. In the game feed, our batting half-innings begin with a header line matching:
+Our team is **USA Scout 8u Prospects**. Our batting half-innings begin with a header line matching either form (Top when visiting, Bottom when home):
 
 ```
+Top [N] - USA Scout 8u Prospects
 Bottom [N] - USA Scout 8u Prospects
 ```
 
-Skip all `Top [N] - [Opponent]` sections entirely.
+Skip all half-innings headed by the **opponent's** team name entirely.
 
 ---
 
@@ -158,6 +159,7 @@ For each PA, record:
 - 2B: Double
 - 3B: Triple
 - HR: Home Run
+- BB: Walk or HBP (batter reaches without a hit)
 - RBI: runs that score as a result of this batter's PA (including on errors during the PA)
 - R: credited when the player themselves crosses home plate (tracked on other batters' PAs)
 - RE24: accumulated — add this PA's RE24 to the player's season total
@@ -179,18 +181,83 @@ Final Score: USA Scout 8u Prospects [N] — [Opponent] [N]  (W / L)
 |---|--------|--------|------|---------|------|---|-----------|----------|------|
 
 **Game Summary Table** (per player, this game only):
-| Player | # | PA | H | 2B | 3B | HR | RBI | R | RE24 |
-|--------|---|----|----|----|----|----|----|---|------|
+| Player | # | PA | H | 2B | 3B | HR | BB | RBI | R | RE24 |
+|--------|---|----|----|----|----|----|----|-----|---|------|
 
 ### Update: `Spring2026/PlayerStats.md`
 
+Column order: `Player | # | PA | H | 2B | 3B | HR | BB | RBI | R | OBP | SLG | OPS | RE24 | RE24/PA`
+
 For each player who had at least one PA in this game:
-- Add to their PA count
-- Add to their H, 2B, 3B, HR, RBI, R counts
+- Add to their PA, H, 2B, 3B, HR, BB, RBI, R counts
 - **Add this game's RE24 to their season RE24 total** (never replace — always add)
-- Recalculate RE24/PA
+- Recalculate derived stats from cumulative totals:
+  - OBP = (H + BB) / PA  → format as `.XXX`
+  - SLG = (H + 2B + 2×3B + 3×HR) / PA  → format as `.XXX`
+  - OPS = OBP + SLG  → format as `.XXX` (may exceed 1.000)
+  - RE24/PA = RE24 / PA  → format as `+0.XXX` / `−0.XXX`
 - Re-sort the table by RE24 descending
 - Update the "Last updated" date in the header
+
+---
+
+### Create/Update: `Spring2026/CurrentSuggestedBattingOrder.md`
+
+Run the batting order algorithm (Step 9) to regenerate the suggested lineup.
+
+---
+
+## Step 9 — Generate Suggested Batting Order
+
+After `PlayerStats.md` is updated, regenerate `Spring2026/CurrentSuggestedBattingOrder.md`.
+
+**Reference:** `Context/StatDrivenLineup.md` defines the 9 roles. This system extends them to 12 spots.
+
+**Speed values** are read from `Spring2026/Roster.md` (1–10 scale; blank = treat as 0 for tiebreaking).
+
+### Algorithm
+
+Pool = all players with PA > 0. Assign spots greedily in order — each player used exactly once.
+
+**Tiebreaker order** (when the primary stat is tied): Speed (higher wins) → RE24/PA (higher wins) → PA (higher wins).
+Speed tiebreaker only applies at speed-sensitive spots (1, 6, 9); ignored elsewhere.
+
+```
+Spot 1  — The Catalyst        → highest OBP from pool           [tiebreak: Speed, RE24/PA]
+Spot 2  — Best All-Around     → highest OPS from remaining       [tiebreak: RE24/PA]
+Spot 3  — High-Value Bat      → highest OPS from remaining       [tiebreak: RE24/PA]
+Spot 4  — The Cleanup         → highest SLG from remaining       [tiebreak: RE24/PA]
+Spot 5  — Second Cleanup      → highest OPS from remaining       [tiebreak: RE24/PA]
+Spot 6  — Second Lead-off     → highest OBP from remaining       [tiebreak: Speed, RE24/PA]
+Spot 7  — Mid-Range           → highest OPS from remaining       [tiebreak: RE24/PA]
+Spot 8  — Lower Tier          → highest OPS from remaining       [tiebreak: RE24/PA]
+Spot 9  — Table Setter        → highest OBP from remaining       [tiebreak: Speed, RE24/PA]
+Spots 10–11 — Extended Tier   → remaining PA>0 players by OPS descending
+Spot 12 — No PA / Pending     → players with 0 PA, by jersey number
+```
+
+> "High Defense" (spot 8 in StatDrivenLineup.md) is not tracked in this system — use OPS as the proxy.
+
+### Output Format
+
+```markdown
+# Suggested Batting Order — Spring 2026
+
+**Philosophy:** Role-based (Context/StatDrivenLineup.md). Each spot filled by the best
+available player for that role's primary stat. Speed (from Roster.md) breaks ties at
+speed-sensitive spots (1, 6, 9).
+**Updated after:** [Date] vs [Opponent]
+
+| # | Player | Jsy | OBP | SLG | OPS | RE24/PA | Role |
+|--:|--------|----:|----:|----:|----:|--------:|------|
+| 1 | ...    |     |     |     |     |         | The Catalyst       |
+...through 12...
+
+## Rationale
+
+**1. [Player]** — The Catalyst: [one sentence explaining the slot assignment].
+...through 12...
+```
 
 ---
 
