@@ -46,7 +46,7 @@ See `Context/ParseInstructions.md` for the complete step-by-step guide.
 
 **Short version:**
 1. Read the game feed
-2. Find all `Bottom X - USA Scout 8u Prospects` half-innings
+2. Find all `Bottom X - USA Scout 8u Prospects` or `Top X - USA Scout 8u Prospects` half-innings
 3. For each PA in those half-innings, calculate RE24
 4. Create `Spring2026/Games/[YYYY-MM-DD]_vs_[Opponent].md` with PA-by-PA detail
 5. Update `Spring2026/PlayerStats.md` with cumulative totals
