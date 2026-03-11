@@ -1,0 +1,11 @@
+# JetBrains Rider
+.idea/
+*.sln.iml
+*.iml
+
+# Rider build/cache artifacts
+_ReSharper*/
+*.DotSettings.user
+
+# Rider temp/local files
+.idea.*.iml
