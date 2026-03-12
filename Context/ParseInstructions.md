@@ -223,15 +223,20 @@ Pool = all players with PA > 0. Assign spots greedily in order — each player u
 Speed tiebreaker only applies at speed-sensitive spots (1, 6, 9); ignored elsewhere.
 
 ```
-Spot 1  — The Catalyst        → highest OBP from pool           [tiebreak: Speed, RE24/PA]
-Spot 2  — Best All-Around     → highest OPS from remaining       [tiebreak: RE24/PA]
-Spot 3  — High-Value Bat      → highest OPS from remaining       [tiebreak: RE24/PA]
-Spot 4  — The Cleanup         → highest SLG from remaining       [tiebreak: RE24/PA]
-Spot 5  — Second Cleanup      → highest OPS from remaining       [tiebreak: RE24/PA]
-Spot 6  — Second Lead-off     → highest OBP from remaining       [tiebreak: Speed, RE24/PA]
-Spot 7  — Mid-Range           → highest OPS from remaining       [tiebreak: RE24/PA]
-Spot 8  — Lower Tier          → highest OPS from remaining       [tiebreak: RE24/PA]
-Spot 9  — Table Setter        → highest OBP from remaining       [tiebreak: Speed, RE24/PA]
+Spot 1        — The Catalyst    → highest OBP from pool                    [tiebreak: Speed, RE24/PA]
+
+Spots 2–4 filled as a GROUP to ensure high run-producing value:
+  Step A: Select the top 3 remaining players by RE24/PA → call this the "core group"
+  Step B: Assign within the core group by role:
+    Spot 2  — Best All-Around  → highest OPS in core group                 [tiebreak: RE24/PA]
+    Spot 3  — High-Value Bat   → next-highest OPS in core group            [tiebreak: RE24/PA]
+    Spot 4  — The Cleanup      → remaining core group player               [tiebreak: RE24/PA]
+
+Spot 5  — Second Cleanup      → highest OPS from remaining                 [tiebreak: RE24/PA]
+Spot 6  — Second Lead-off     → highest OBP from remaining                 [tiebreak: Speed, RE24/PA]
+Spot 7  — Mid-Range           → highest OPS from remaining                 [tiebreak: RE24/PA]
+Spot 8  — Lower Tier          → highest OPS from remaining                 [tiebreak: RE24/PA]
+Spot 9  — Table Setter        → highest OBP from remaining                 [tiebreak: Speed, RE24/PA]
 Spots 10–11 — Extended Tier   → remaining PA>0 players by OPS descending
 Spot 12 — No PA / Pending     → players with 0 PA, by jersey number
 ```
