@@ -1,0 +1,28 @@
+# Game 1 Compact Feed — 2026-03-14 vs East Cobb Mariners
+# USA Scout Prospects 8U (home) | Our half-innings only | One PA per line
+# Columns: Inn | Batter | Play | Outs_bef | State_bef | Outs_aft | State_aft | R | Scorers
+
+B1 | P Morrison | GO  | 0 | ---  | 1 | ---  | 0
+B1 | L Meyer    | 1B  | 1 | ---  | 1 | 1--  | 0
+B1 | B Parker   | Err | 1 | 1--  | 1 | 12-  | 0
+B1 | C Griffin  | PO  | 1 | 12-  | 2 | -23  | 0
+B1 | J Ham      | BB  | 2 | -23  | 2 | 123  | 0
+B1 | H Steed    | K   | 2 | 123  | 3 | ---  | 0
+B2 | L Watkins  | BB  | 0 | ---  | 0 | 1--  | 0
+B2 | B Hipp     | Err | 0 | 1--  | 0 | 12-  | 0
+B2 | B Herrera  | BB  | 0 | 12-  | 0 | 123  | 0
+B2 | C Hayes    | 1B  | 0 | 123  | 0 | -23  | 2 | B Hipp, L Watkins
+B2 | C Newton   | PO  | 0 | -23  | 1 | -23  | 0
+B2 | L Brown    | BB  | 1 | -23  | 1 | 123  | 0
+B2 | P Morrison | FC  | 1 | 123  | 2 | 123  | 0
+B2 | L Meyer    | Err | 2 | 123  | 2 | -23  | 2 | L Brown, C Hayes
+B2 | B Parker   | 1B  | 2 | -23  | 2 | -23  | 1 | P Morrison
+B2 | C Griffin  | 1B  | 2 | -23  | 2 | 1-3  | 1 | L Meyer
+B2 | J Ham      | 1B  | 2 | 1-3  | 2 | 123  | 0
+B2 | H Steed    | 2B  | 2 | 123  | 3 | ---  | 2 | B Parker, C Griffin
+B3 | L Watkins  | PO  | 0 | ---  | 1 | ---  | 0
+B3 | B Hipp     | HBP | 1 | ---  | 1 | 1--  | 0
+B3 | B Herrera  | BB  | 1 | 1--  | 1 | 12-  | 0
+B3 | C Hayes    | K   | 1 | 12-  | 2 | -23  | 0
+B3 | C Newton   | Err | 2 | -23  | 2 | 1--  | 2 | B Hipp, B Herrera
+B3 | L Brown    | K   | 2 | 1--  | 3 | ---  | 0
