@@ -26,8 +26,11 @@ RE24Scouts/
 ├── Spring2026/                       # Current season
 │   ├── Roster.md                     # Active roster for this season
 │   ├── PlayerStats.md                # Season cumulative stats (updated after each game)
-│   └── Games/
-│       └── [YYYY-MM-DD]_vs_[Opponent].md   # Per-game PA-by-PA detail
+│   ├── GameFeed/
+│   │   ├── [GameName].txt            # Raw game feed (as provided)
+│   │   └── [GameName]_compact.txt    # Compact feed generated in Step 0
+│   └── GameBreakDown/
+│       └── [GameName].md             # Per-game PA-by-PA detail (same name as feed, .md)
 └── GameFeeds/
     └── ExampleGame.md                # Reference example only
 ```
@@ -37,7 +40,7 @@ RE24Scouts/
 ## Current Season
 **Spring2026** — all season files live in `Spring2026/`.
 
-To start a new season: create a new `SeasonYear/` folder with a fresh `Roster.md` and `PlayerStats.md`, and a new `Games/` subfolder.
+To start a new season: create a new `SeasonYear/` folder with a fresh `Roster.md` and `PlayerStats.md`, and new `GameFeed/` and `GameBreakDown/` subfolders.
 
 ---
 
@@ -48,5 +51,5 @@ See `Context/ParseInstructions.md` for the complete step-by-step guide.
 1. Read the game feed
 2. Find all `Bottom X - USA Scout 8u Prospects` or `Top X - USA Scout 8u Prospects` half-innings
 3. For each PA in those half-innings, calculate RE24
-4. Create `Spring2026/Games/[YYYY-MM-DD]_vs_[Opponent].md` with PA-by-PA detail
+4. Create `Spring2026/GameBreakDown/[GameName].md` with PA-by-PA detail
 5. Update `Spring2026/PlayerStats.md` with cumulative totals

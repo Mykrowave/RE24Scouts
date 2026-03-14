@@ -67,7 +67,7 @@ B1 | H Steed    | K   | 2 | 123 | 3 | ---  | 0
 B2 | C Hayes    | 1B  | 0 | 123 | 0 | -23  | 2 | B Hipp, L Watkins
 ```
 
-**Save to:** `Spring2026/Games/[original_filename]_compact.txt`
+**Save to:** `Spring2026/GameFeed/[original_filename]_compact.txt`
 
 ---
 
@@ -139,7 +139,7 @@ RE24 = (RE_after + R) − RE_before
 
 ## Step 4 — Files to Create / Update
 
-### A. Create: `Spring2026/Games/[YYYY-MM-DD]_vs_[Opponent].md`
+### A. Create: `Spring2026/GameBreakDown/[original_filename].md`
 
 **Header:**
 ```

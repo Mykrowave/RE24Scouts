@@ -3,45 +3,45 @@
 **Philosophy:** Role-based (Context/StatDrivenLineup.md). Each spot filled by the best
 available player for that role's primary stat. Speed (from Roster.md) breaks ties at
 speed-sensitive spots (1, 6, 9).
-**Updated after:** 2026-03-14 vs East Cobb Mariners
+**Updated after:** 2026-03-14 vs SBU/Tribe (Game 2)
 
 |  # | Player          | Jsy |   OBP |   SLG |   OPS | RE24/PA | Role               |
 |---:|:----------------|----:|------:|------:|------:|--------:|:-------------------|
-|  1 | Jase Ham        |  28 | 1.000 |  .500 | 1.500 |  +0.219 | The Catalyst       |
-|  2 | Logan Meyer     |  99 |  .500 |  .500 | 1.000 |  +1.042 | Best All-Around    |
-|  3 | Baxter Parker   |  14 |  .500 |  .500 | 1.000 |  +0.688 | High-Value Bat     |
-|  4 | Cooper Hayes    |   2 |  .500 |  .500 | 1.000 |  +0.684 | The Cleanup        |
-|  5 | Henry Steed     |  11 |  .500 | 1.000 | 1.500 |  −0.252 | Second Cleanup     |
-|  6 | Balyn Herrera   |   3 | 1.000 |  .000 | 1.000 |  +0.615 | Second Lead-off    |
-|  7 | Charlie Griffin |  44 |  .500 |  .500 | 1.000 |  +0.301 | Mid-Range          |
-|  8 | Benjamin Hipp   |  13 |  .500 |  .000 |  .500 |  +0.417 | Lower Tier         |
-|  9 | Liam Brown      |   1 |  .500 |  .000 |  .500 |  −0.030 | Table Setter       |
-| 10 | Levi Watkins    |  23 |  .500 |  .000 |  .500 |  +0.076 | Extended Tier      |
-| 11 | Cooper Newton   |  42 |  .000 |  .000 |  .000 |  +0.528 | Extended Tier      |
-| 12 | Porter Morrison |  27 |  .000 |  .000 |  .000 |  −0.508 | No PA / Pending    |
+|  1 | Jase Ham        |  28 | 1.000 |  .250 | 1.250 |  +0.405 | The Catalyst       |
+|  2 | Baxter Parker   |  14 |  .500 |  .500 | 1.000 |  +0.954 | Best All-Around    |
+|  3 | Logan Meyer     |  99 |  .750 |  .250 | 1.000 |  +0.651 | High-Value Bat     |
+|  4 | Charlie Griffin |  44 |  .500 |  .250 |  .750 |  +0.651 | The Cleanup        |
+|  5 | Cooper Hayes    |   2 |  .667 |  .667 | 1.333 |  +0.789 | Second Cleanup     |
+|  6 | Balyn Herrera   |   3 | 1.000 |  .333 | 1.333 |  +0.536 | Second Lead-off    |
+|  7 | Benjamin Hipp   |  13 |  .500 |  .500 | 1.000 |  +0.331 | Mid-Range          |
+|  8 | Henry Steed     |  11 |  .500 |  .500 | 1.000 |  −0.211 | Lower Tier         |
+|  9 | Levi Watkins    |  23 |  .500 |  .250 |  .750 |  −0.065 | Table Setter       |
+| 10 | Liam Brown      |   1 |  .333 |  .000 |  .333 |  −0.069 | Extended Tier      |
+| 11 | Porter Morrison |  27 |  .250 |  .000 |  .250 |  −0.280 | Extended Tier      |
+| 12 | Cooper Newton   |  42 |  .000 |  .000 |  .000 |  +0.235 | Extended Tier      |
 
 ## Rationale
 
-**1. Jase Ham** — The Catalyst: tied for the team's highest OBP (1.000) with Herrera; Speed 7 beats Herrera's 6.5 at this speed-sensitive spot.
+**1. Jase Ham** — The Catalyst: highest OBP on the roster (1.000), tied with Herrera; Speed 7 beats Herrera's 6.5 at this speed-sensitive spot.
 
-**2. Logan Meyer** — Best All-Around: top RE24/PA on the team (+1.042) and lands in the core group (top-3 RE24/PA); highest RE24/PA in the core group earns the #2 spot.
+**2. Baxter Parker** — Best All-Around: top RE24/PA on the team (+0.954) lands him in the core group; highest RE24/PA in the group earns the #2 slot with OPS 1.000.
 
-**3. Baxter Parker** — High-Value Bat: second-highest RE24/PA in the core group (+0.688); all three core players share OPS 1.000, so RE24/PA breaks the order.
+**3. Logan Meyer** — High-Value Bat: second-highest RE24/PA in the core group (+0.651); OPS 1.000 ties Parker but RE24/PA tiebreak gives him #3.
 
-**4. Cooper Hayes** — The Cleanup: third core-group member; RE24/PA (+0.684) just behind Parker.
+**4. Charlie Griffin** — The Cleanup: third core-group member by RE24/PA (+0.651); lower OPS (.750) assigns him to the bottom of the core group.
 
-**5. Henry Steed** — Second Cleanup: leads all remaining players in OPS (1.500 on the strength of his double), earning the highest-power slot available; note negative RE24/PA reflects a tough inning-ending strikeout in Game 1.
+**5. Cooper Hayes** — Second Cleanup: highest OPS among remaining players (1.333, tied with Herrera); RE24/PA tiebreak (+0.789 vs +0.536) gives Hayes the edge.
 
-**6. Balyn Herrera** — Second Lead-off: highest OBP among remaining players (1.000 on 2 walks); ideal rally-starter for the bottom half.
+**6. Balyn Herrera** — Second Lead-off: highest OBP among remaining players (1.000); classic rally-starter for the bottom half of the order.
 
-**7. Charlie Griffin** — Mid-Range: highest OPS among remaining players (1.000); a solid bridge through the order.
+**7. Benjamin Hipp** — Mid-Range: highest OPS among remaining (1.000), tied with Steed; RE24/PA tiebreak (+0.331 vs −0.211) gives Hipp the edge.
 
-**8. Benjamin Hipp** — Lower Tier: three-way tie at OPS .500 (with Watkins and Brown); RE24/PA tiebreak (+0.417) gives him the edge.
+**8. Henry Steed** — Lower Tier: highest OPS among remaining (1.000); RE24/PA is negative but OPS reflects his double and extra-base ability.
 
-**9. Liam Brown** — Table Setter: tied OBP .500 with Watkins at this speed-sensitive spot; Speed 10 (fastest on roster) decisively wins the tiebreak.
+**9. Levi Watkins** — Table Setter: highest OBP remaining (.500); no tiebreak needed.
 
-**10. Levi Watkins** — Extended Tier: highest OPS among final three remaining (.500).
+**10. Liam Brown** — Extended Tier: highest OPS among final three (.333).
 
-**11. Cooper Newton** — Extended Tier: tied OPS .000 with Morrison; RE24/PA tiebreak (+0.528 vs −0.508) favors Newton.
+**11. Porter Morrison** — Extended Tier: second-highest OPS (.250) beats Newton's .000.
 
-**12. Porter Morrison** — Extended Tier: last remaining player; RE24/PA of −0.508 reflects two difficult PAs (GO + FC) in Game 1.
+**12. Cooper Newton** — Extended Tier: last remaining player; strong RE24/PA (+0.235) reflects two error-reach PAs, but OPS (.000) places him last in the extended sort.
