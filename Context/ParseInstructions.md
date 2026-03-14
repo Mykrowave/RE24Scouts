@@ -127,6 +127,7 @@ RE24 = (RE_after + R) − RE_before
 |:-----|:---------------|
 | PA   | always (every line) |
 | H    | Play = 1B, 2B, 3B, or HR |
+| AVG  | derived: H / (PA − BB); show `---` when PA − BB = 0 |
 | 2B   | Play = 2B |
 | 3B   | Play = 3B |
 | HR   | Play = HR |
@@ -152,16 +153,17 @@ Final Score: USA Scout 8u Prospects [N] — [Opponent] [N]  (W / L)
 |---|--------|--------|------|---------|------|---|-----------|----------|------|
 
 **Game Summary Table** (per player, this game only):
-| Player | # | PA | H | 2B | 3B | HR | BB | RBI | R | RE24 |
-|--------|---|----|----|----|----|----|----|-----|---|------|
+| Player | # | PA | H | AVG | 2B | 3B | HR | BB | RBI | R | RE24 |
+|--------|---|----|----|-----|----|----|----|----|-----|---|------|
 
 ### B. Update: `Spring2026/PlayerStats.md`
 
-Column order: `Player | # | PA | H | 2B | 3B | HR | BB | RBI | R | OBP | SLG | OPS | RE24 | RE24/PA`
+Column order: `Player | # | PA | H | AVG | 2B | 3B | HR | BB | RBI | R | OBP | SLG | OPS | RE24 | RE24/PA`
 
 - Add game totals to each player's cumulative counts.
 - **Add** this game's RE24 to their season total (never replace).
 - Recalculate derived stats from cumulative totals:
+  - AVG = H / (PA − BB) → format `.XXX`; show `---` when PA − BB = 0
   - OBP = (H + BB) / PA → format `.XXX`
   - SLG = (H + 2B + 2×3B + 3×HR) / PA → format `.XXX`
   - OPS = OBP + SLG → format `.XXX` (may exceed 1.000)
