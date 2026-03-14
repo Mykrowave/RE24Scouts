@@ -12,7 +12,7 @@
 | Porter Morrison | 27 |   9.5 |
 | Jase Ham        | 28 |     7 |
 | Cooper Newton   | 42 |   7.5 |
-| Charlie Griffin | 44 |     9 |
-| Logan Meyer     | 99 |     7 |
+| Charlie Griffin | 44 |   9.5 |
+| Logan Meyer     | 99 |   7.5 |
 
-> Speed: 1 (slowest) – 10 (fastest). Decimals allowed.
+> Speed: 1 (slowest) – 10 (fastest). Decimals allowed. Rating includes baserunning skills (not just speed)
