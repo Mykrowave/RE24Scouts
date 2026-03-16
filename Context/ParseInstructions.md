@@ -7,7 +7,9 @@ This document explains how to parse a game feed and produce three outputs:
 2. A per-game detail file at `Spring2026/Games/[YYYY-MM-DD]_vs_[Opponent].md`
 3. Updated cumulative stats in `Spring2026/PlayerStats.md`
 
-**Two-pass process:** Step 0 converts the raw feed to compact format. Steps 1–5 operate on that compact file — never re-read the raw feed after Step 0.
+**Two-pass process — strictly enforced:**
+1. **Step 0** parses the raw feed and writes the compact file to disk. **Stop completely after writing it.**
+2. **Steps 1–5** begin by reading the saved compact file. All RE24 calculations and stat counting must derive from that file, not from memory of the raw feed.
 
 Only process **our team's half-innings**. Our team is **USA Scout 8u Prospects**.
 
@@ -69,9 +71,13 @@ B2 | C Hayes    | 1B  | 0 | 123 | 0 | -23  | 2 | B Hipp, L Watkins
 
 **Save to:** `Spring2026/GameFeed/[original_filename]_compact.txt`
 
+> ⚠️ **HARD STOP** — Write the compact file now. Do not proceed to Step 1 until the file is confirmed written. Steps 1–5 must be driven by reading the compact file, not by memory of the raw feed.
+
 ---
 
-## Step 1 — Map Player Names
+## Step 1 — Read Compact File, Then Map Player Names
+
+Read `Spring2026/GameFeed/[original_filename]_compact.txt`. All subsequent work derives from this file only.
 
 Compact feed uses abbreviated names. Map to full names:
 
